@@ -1,0 +1,5 @@
+2018-01-18 19:08:18,026::ERROR::error
+Traceback (most recent call last):
+  File "log3.py", line 9, in <module>
+    1/0
+ZeroDivisionError: division by zero

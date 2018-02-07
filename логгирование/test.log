@@ -1,0 +1,7 @@
+root::2018-01-17 10:41:48,923::message
+root::2018-01-17 10:41:48,923::message
+root::2018-01-17 10:41:48,924::err
+Traceback (most recent call last):
+  File "logging_learn.py", line 11, in <module>
+    1/0
+ZeroDivisionError: division by zero
