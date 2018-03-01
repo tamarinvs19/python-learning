@@ -1,10 +1,11 @@
 def first_while(xs):
     #print(len(xs))
     i = 0
-    while i < len(xs) and xs[i] != 1:
+    a =len(xs)
+    while i < a and xs[i] != 1:
         i += 1 
         #print(i)
-    if i <= len(xs):
+    if i <= a:
         res = i
     else:
         res = None

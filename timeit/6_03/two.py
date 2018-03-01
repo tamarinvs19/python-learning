@@ -1,12 +1,21 @@
 import timeit
-n = 10
-def test():
-    a = timeit.timeit('one.first_while(genetation_test_fix.generate_lists(750))', number = n, setup='import genetation_test_fix, one')
-    b = timeit.timeit('one.second_for(genetation_test_fix.generate_lists(750))', number = n, setup='import genetation_test_fix, one')
-    c = timeit.timeit('one.third_index(genetation_test_fix.generate_lists(750))', number = n, setup='import genetation_test_fix, one')
-    d = timeit.timeit('one.fourth_try_index(genetation_test_fix.generate_lists(750))', number = n, setup='import genetation_test_fix, one')
-    print('while - 750', a)
-    print('for - 750', b)
-    print('index - 750', c)
-    print('try - 750', d)
-test()
+n = 100000
+setup0 = 'import genetation_test_fix, one; xs = genetation_test_fix.generate_lists({})'
+def test(count):
+    setup1 = setup0.format(count)
+    a = timeit.timeit('one.first_while(xs)',
+                      number = n, setup=setup1)
+    b = timeit.timeit('one.second_for(xs)',
+                      number = n, setup=setup1)
+    c = timeit.timeit('one.third_index(xs)',
+                      number = n, setup=setup1)
+    d = timeit.timeit('one.fourth_try_index(xs)',
+                      number = n, setup=setup1 )
+    print(count)
+    print('while :', a)
+    print('for :', b)
+    print('index :', c)
+    print('try :', d)
+test(750)
+test(500)
+test(250)
