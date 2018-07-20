@@ -26,6 +26,6 @@ def third_index(xs):
 def fourth_try_index(xs):
     try:
         res = xs.index(1)
-    except:
+    except ValueError:
         res = None
     return res
