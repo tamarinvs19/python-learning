@@ -9,11 +9,11 @@ class TestComputerRiddler(unittest.TestCase):
         self.assertTrue(hasattr(cr, 'number') and type(cr.number) == int) # есть ли объект 'number' в cr и целое ли это число
         self.assertTrue(1 <= cr.number <= 99) # проверка значения
 
-    @patch('guesser.ComputerRiddler')
-    def test_check(self, m_CR):
-        #cr = ComputerRiddler()
-        cr = MagicMock(spec=ComputerRiddler)
-        cr.check = ComputerRiddler.check
+    #@patch('guesser.ComputerRiddler')
+    def test_check(self):  #  , m_CR):
+        cr = ComputerRiddler()
+        #cr = MagicMock(spec=ComputerRiddler)
+        #cr.check = ComputerRiddler.check
         cr.number = 50
         self.assertEqual((True, '='), cr.check(50)) # тест на равенство двух значений
         self.assertEqual((False, '>'), cr.check(25))
