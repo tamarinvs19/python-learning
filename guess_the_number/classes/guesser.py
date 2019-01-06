@@ -33,15 +33,18 @@ class ComputerRiddlerHard(Riddler):
     def __init__(self):
         self.borders = {'left':1, 'right':100}
 
+    def update(self, left, right):
+        self.borders['left'], self.borders['right'] = left, right
+
     def check(self, guessed_number):
         if self.borders['left'] <= guessed_number <= self.borders['right']:
             if self.borders['left'] == self.borders['right']:
                 return True, '='
             elif guessed_number - self.borders['left'] <= self.borders['right'] - guessed_number:
-                self.borders['left'] = guessed_number + 1
+                self.update(guessed_number + 1, self.borders['right'])
                 return False, '>'
             elif guessed_number - self.borders['left'] > self.borders['right'] - guessed_number:
-                self.borders['right'] = guessed_number - 1
+                self.update(self.borders['left'], guessed_number - 1)
                 return False, '<'
         elif guessed_number <= self.borders['left']:
             return False, '<'
