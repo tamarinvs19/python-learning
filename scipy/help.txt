@@ -1,0 +1,5 @@
+docs.scipy.org
+
+scalar function:
+	bisect
+	newton
