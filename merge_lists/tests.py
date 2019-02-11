@@ -1,4 +1,4 @@
-from merge import linear_merge0, linear_merge1, linear_merge2, heapq_merge, counter_merge
+from merge import linear_merge0, linear_merge1, iter_merge0, iter_merge1, heapq_merge, counter_merge, simple_merge
 import unittest
 from unittest.mock import patch, MagicMock
 
@@ -10,9 +10,11 @@ class TestMerge(unittest.TestCase):
         res = [1,2,3,4,6,7,8,9]
         self.assertEqual(linear_merge0(list1, list2), res)
         self.assertEqual(linear_merge1(list1, list2), res)
-        self.assertEqual(linear_merge2(list1, list2), res)
+        self.assertEqual(iter_merge0(list1, list2), res)
+        self.assertEqual(list(iter_merge1(list1, list2)), res)
         self.assertEqual(heapq_merge(list1, list2), res)
         self.assertEqual(counter_merge(list1, list2), res)
+        self.assertEqual(simple_merge(list1, list2), res)
 
     def test_two(self):
         list1 = [1, 1, 1, 1]
@@ -20,9 +22,11 @@ class TestMerge(unittest.TestCase):
         res = [1,1,1,1,2,2,2,2]
         self.assertEqual(linear_merge0(list1, list2), res)
         self.assertEqual(linear_merge1(list1, list2), res)
-        self.assertEqual(linear_merge2(list1, list2), res)
+        self.assertEqual(iter_merge0(list1, list2), res)
+        self.assertEqual(list(iter_merge1(list1, list2)), res)
         self.assertEqual(heapq_merge(list1, list2), res)
         self.assertEqual(counter_merge(list1, list2), res)
+        self.assertEqual(simple_merge(list1, list2), res)
 
     def test_three(self):
         list1 = [1, 2, 2, 2]
@@ -30,9 +34,11 @@ class TestMerge(unittest.TestCase):
         res = [1,2,2,2,2,2,2,2]
         self.assertEqual(linear_merge0(list1, list2), res)
         self.assertEqual(linear_merge1(list1, list2), res)
-        self.assertEqual(linear_merge2(list1, list2), res)
+        self.assertEqual(iter_merge0(list1, list2), res)
+        self.assertEqual(list(iter_merge1(list1, list2)), res)
         self.assertEqual(heapq_merge(list1, list2), res)
         self.assertEqual(counter_merge(list1, list2), res)
+        self.assertEqual(simple_merge(list1, list2), res)
 
     def test_four(self):
         list1 = [2, 2, 2, 2]
@@ -40,9 +46,11 @@ class TestMerge(unittest.TestCase):
         res = [2,2,2,2,2,2,2,2]
         self.assertEqual(linear_merge0(list1, list2), res)
         self.assertEqual(linear_merge1(list1, list2), res)
-        self.assertEqual(linear_merge2(list1, list2), res)
+        self.assertEqual(iter_merge0(list1, list2), res)
+        self.assertEqual(list(iter_merge1(list1, list2)), res)
         self.assertEqual(heapq_merge(list1, list2), res)
         self.assertEqual(counter_merge(list1, list2), res)
+        self.assertEqual(simple_merge(list1, list2), res)
 
     def test_five(self):
         list1 = [1, 20, 30, 40]
@@ -50,9 +58,11 @@ class TestMerge(unittest.TestCase):
         res = [1,1,10,12,20,21,30,40]
         self.assertEqual(linear_merge0(list1, list2), res)
         self.assertEqual(linear_merge1(list1, list2), res)
-        self.assertEqual(linear_merge2(list1, list2), res)
+        self.assertEqual(iter_merge0(list1, list2), res)
+        self.assertEqual(list(iter_merge1(list1, list2)), res)
         self.assertEqual(heapq_merge(list1, list2), res)
         self.assertEqual(counter_merge(list1, list2), res)
+        self.assertEqual(simple_merge(list1, list2), res)
 
     def test_six(self):
         list1 = [1, 20]
@@ -60,9 +70,11 @@ class TestMerge(unittest.TestCase):
         res = [1,1,10,12,20,21]
         self.assertEqual(linear_merge0(list1, list2), res)
         self.assertEqual(linear_merge1(list1, list2), res)
-        self.assertEqual(linear_merge2(list1, list2), res)
+        self.assertEqual(iter_merge0(list1, list2), res)
+        self.assertEqual(list(iter_merge1(list1, list2)), res)
         self.assertEqual(heapq_merge(list1, list2), res)
         self.assertEqual(counter_merge(list1, list2), res)
+        self.assertEqual(simple_merge(list1, list2), res)
 
     def test_seven(self):
         list1 = [1, 20]
@@ -70,9 +82,11 @@ class TestMerge(unittest.TestCase):
         res = [1,2,10,12,19,20]
         self.assertEqual(linear_merge0(list1, list2), res)
         self.assertEqual(linear_merge1(list1, list2), res)
-        self.assertEqual(linear_merge2(list1, list2), res)
+        self.assertEqual(iter_merge0(list1, list2), res)
+        self.assertEqual(list(iter_merge1(list1, list2)), res)
         self.assertEqual(heapq_merge(list1, list2), res)
         self.assertEqual(counter_merge(list1, list2), res)
+        self.assertEqual(simple_merge(list1, list2), res)
 
 
 if __name__ == '__main__':
