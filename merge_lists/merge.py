@@ -38,8 +38,7 @@ def iter_merge0(list1, list2):
         result += [x] + list(list1)
     return result
 
-def iter_merge1(ia, ib):
-    ia, ib = iter(ia), iter(ib)
+def iter_merge(ia, ib):
     a = next(ia, None)
     b = next(ib, None)
     while a is not None or b is not None:
@@ -49,6 +48,9 @@ def iter_merge1(ia, ib):
         else:
             yield b
             b = next(ib, None)
+
+def iter_merge1(ia, ib):
+    return list(iter_merge(iter(ia), iter(ib)))
 
 def counter_merge(list1, list2):
     return sorted(list(Counter(list1 + list2).elements()))

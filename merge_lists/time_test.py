@@ -18,7 +18,7 @@ def test_time():
     res6 += timeit('merge(list1, list2)', number=100, globals={'merge': simple_merge, 'list1': list1, 'list2': list2})
 
 def time_test():
-    for _ in range(100):
+    for _ in range(1000):
         test_time()
 
     print('linear_merge0', res0)
