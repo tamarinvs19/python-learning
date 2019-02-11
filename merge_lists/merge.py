@@ -1,6 +1,20 @@
 from heapq import merge
 from collections import Counter
 
+
+def linear_merge0(list1, list2):
+    i, j = 0, 0
+    res = []
+    while i < len(list1) and j < len(list2):
+        if list1[i] < list2[j]:
+            res.append(list1[i])
+            i += 1
+        else:
+            res.append(list2[j])
+            j += 1
+    res += list1[i:] + list2[j:]
+    return res
+
 def linear_merge1(list1, list2):
     result, list1, list2 = [], list1[:], list2[:]
     while len(list1) and len(list2):
