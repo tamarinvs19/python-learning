@@ -6,24 +6,24 @@ long * merge(long *x, long *y) {
     long i, j;
     long result[sizeof x + sizeof y];
     while (i < sizeof x && j < sizeof y){
-	if (x[i] < y[j]) {
-	    result[i+j] = x[i];
+	if (x[*i] < y[*j]) {
+	    result[*i+j] = x[*i];
 	    i++;
 	}
 	else {
-	    result[i+j] = y[j];
+	    result[*i+j] = y[*j];
 	    j++;
 	}
     }
     if (i < sizeof x) {
 	while (j < sizeof y){
-	    result[i+j] = y[j];
+	    result[*i+j] = y[*j];
 	    y++;
 	}
     }
     else {
 	while (i < sizeof x){
-	    result[i+j] = x[i];
+	    result[*i+j] = x[*i];
 	    i++;
 	}
     }
