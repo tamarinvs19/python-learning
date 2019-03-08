@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-long* merge(long *x, long *y) {
-    long i, j;
+long merge(long *x, long *y) {
+    long i = 0, j = 0;
     long result[sizeof x + sizeof y];
-    while (i < sizeof x && j < sizeof y){
+    while ((i < sizeof x) && (j < sizeof y)){
 	if (x[i] < y[j]) {
 	    result[i+j] = x[i];
 	    i++;
@@ -26,14 +26,16 @@ long* merge(long *x, long *y) {
 	    i++;
 	}
     }
-    printf(result);
-    return result;
+    printf("Result:  %ld" + result[0]);
+    return result[0];
+    /* return *result; */
 }
 
 int main() {
     long *r;
     long a[3] = {1, 2, 3}, b[3] = {2, 3, 4};
-    r = merge(a, b);
-    printf( "\nYou entered: %ld ", r[0]);
+    /* r = merge(a, b); */
+    /* printf( "\nYou entered: %ld ", r[0]); */
+    printf( "\nYou entered: %ld ", a);
     return 0;
 }
