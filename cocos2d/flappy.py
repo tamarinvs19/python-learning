@@ -96,5 +96,5 @@ class GameScene(Scene):
         self.add(Background())
         self.add(Game())
 
-cocos.director.director.init(width=size[0], height=size[1])#, fullscreen=True)
+cocos.director.director.init(width=size[0], height=size[1], fullscreen=True)
 cocos.director.director.run(GameScene())
