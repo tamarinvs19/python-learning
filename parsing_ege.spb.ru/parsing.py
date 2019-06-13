@@ -22,25 +22,29 @@ def parsing(series, number):
     else:
         return False
 
-with open('Students.csv', 'r') as f:
-    cin = csv.DictReader(f, fieldnames=['class', 'first_name', 'second_name', 'third_name', 'series', 'number'])
-    students = [row for row in cin]
+def main():
+    with open('Students.csv', 'r') as f:
+        cin = csv.DictReader(f, fieldnames=['class', 'first_name', 'second_name', 'third_name', 'series', 'number'])
+        students = [row for row in cin]
 
-names_all = set()
-for student in students:
-    print(student['first_name'])
-    html = parsing(student['series'], student['number']) 
-    res, names = get_result(html)
-    if res != '':
-        for i, name in enumerate(names):
-            names_all.add(name)
-            student[name] = res[i]
-    if student['first_name'] == 'Крамник':
-        student['Математика профильная'] = '92'
+    names_all = set()
+    for student in students:
+        print(student['first_name'])
+        html = parsing(student['series'], student['number']) 
+        res, names = get_result(html)
+        if res != '':
+            for i, name in enumerate(names):
+                names_all.add(name)
+                student[name] = res[i]
+        if student['first_name'] == 'Крамник':
+            student['Математика профильная'] = '92'
 
-print('parsing finished')
+    print('parsing finished')
 
-with open('students.csv', 'w') as f:
-    cout = csv.DictWriter(f, ['class', 'first_name', 'second_name', 'third_name', 'series', 'number'] + list(names_all))
-    cout.writeheader()
-    cout.writerows(students)
+    with open('students.csv', 'w') as f:
+        cout = csv.DictWriter(f, ['class', 'first_name', 'second_name', 'third_name', 'series', 'number'] + list(names_all))
+        cout.writeheader()
+        cout.writerows(students)
+
+if __name__ == '__main__':
+    main()
