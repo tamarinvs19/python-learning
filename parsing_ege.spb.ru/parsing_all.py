@@ -1,5 +1,6 @@
+from parsing import parsing, get_result
 try:
-    fin = open('res', 'w')
+    fin = open('res', 'a')
     for number in range(27*10**4+2346, 10**7):
         series = '4015'
         number = '0'*(6-len(str(number))) + str(number)
