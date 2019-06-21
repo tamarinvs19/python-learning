@@ -38,6 +38,8 @@ def main():
                 student[name] = res[i]
         if student['first_name'] == 'Крамник':
             student['Математика профильная'] = '92'
+            student['Русский язык'] = '87'
+            student['Физика'] = '78'
 
     print('parsing finished')
     print('\n'.join(names_all))
