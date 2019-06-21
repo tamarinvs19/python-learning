@@ -40,6 +40,7 @@ def main():
             student['Математика профильная'] = '92'
 
     print('parsing finished')
+    print('\n'.join(names_all))
 
     with open('students.csv', 'w') as f:
         cout = csv.DictWriter(f, ['class', 'first_name', 'second_name', 'third_name', 'series', 'number'] + list(names_all))
