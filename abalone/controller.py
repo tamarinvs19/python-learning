@@ -1,5 +1,6 @@
 import cocos
-from . import views, models
+import views, models
+# from . import views, models
 
 
 def main():
