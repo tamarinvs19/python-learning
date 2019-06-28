@@ -40,6 +40,7 @@ def main():
             student['Математика профильная'] = '92'
             student['Русский язык'] = '87'
             student['Физика'] = '78'
+            student['Информатика и ИКТ'] = '72'
 
     print('parsing finished')
     print('\n'.join(names_all))
