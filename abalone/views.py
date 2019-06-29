@@ -17,7 +17,7 @@ class Backgroung(cocos.layer.ColorLayer):
 
 
 def main():
-    cocos.director.director.init(width=510, height=460)
+    cocos.director.director.init(width=500, height=500)
     scene = MainScene()
     cocos.director.director.run(scene)
 

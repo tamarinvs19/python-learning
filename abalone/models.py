@@ -1,6 +1,7 @@
 from pprint import pprint
 from itertools import combinations_with_replacement
 import cocos
+from cocos.director import director
 from pyglet.window import key
 
 
@@ -10,8 +11,9 @@ def f(i, j):
 
 
 class Field(cocos.layer.Layer):
+    is_event_handler = True
     def __init__(self):
-        super().__init__()
+        super(Field, self).__init__()
         self.start_positions = [(4, 0), (3, 1), (2, 2), (1, 3), (0, 4),
                 (-1, 4), (0, 3), (1, 2), (2, 1), (3, 0), (4, -1),
                 (0, 2), (1, 1), (2, 0)]
@@ -24,7 +26,46 @@ class Field(cocos.layer.Layer):
                 'black': [Ball(self.putts[(-x, -y)], 'black') for (x, y) in self.start_positions]
                 }
 
+        self.clicked_balls = set()
+
         self.activation()
+
+
+        # mouse and keys
+        self.text_mouse = cocos.text.Label('NO', x=0, y=480)
+        self.add(self.text_mouse)
+
+        self.text = cocos.text.Label("", x=0, y=460)
+        self.keys_pressed = set()
+        self.update_text()
+        self.add(self.text)
+
+    def update_text(self, x=None, y=None):
+        key_names = [key.symbol_string(k) for k in self.keys_pressed]
+        text = 'Keys: ' + ', '.join(key_names)
+        self.text.element.text = text
+
+    def update_mouse_text(self, x, y):
+        text_mouse = str(self.click_mouse(x, y))
+        # text_mouse = 'Mouse: {}, {}'.format(x, y)
+        self.text_mouse.element.text = text_mouse
+
+    def on_key_press(self, key, modifiers):
+        self.keys_pressed.add(key)
+        self.update_text()
+
+    def on_key_release(self, key, modifiers):
+        self.keys_pressed.remove(key)
+        self.update_text()
+
+    # def on_mouse_motion(self, x, y, dx, dy):
+    #     self.update_mouse_text(x, y)
+
+    # def on_mouse_drag(self, x, y, dx, dy, buttins, modifiers):
+    #     self.update_mouse_text(x, y)
+
+    def on_mouse_press(self, x, y, buttons, modifiers):
+        self.update_mouse_text(x, y)
 
     def activation(self):
         for putt in self.putts.values():
@@ -33,6 +74,17 @@ class Field(cocos.layer.Layer):
             self.add(ball)
         for ball in self.balls['black']:
             self.add(ball)
+
+    def click_mouse(self, x, y):
+        balls = self.balls['white'] + self.balls['black']
+        radius = balls[0].height / 2
+
+        collision_balls = [ball for ball in balls if abs(ball.x + radius - x) < radius and abs(ball.y + radius - y) < radius]
+
+        for ball in collision_balls:
+            ball.click()
+
+        return collision_balls
 
 
 class Hexagonal_position:
@@ -52,7 +104,7 @@ class Putt(cocos.sprite.Sprite):
         self.anchor = self.width/2, self.height/2
         self.position = self.hex_position.euclidean_coordinates
         self.scale = 0.5
-        
+
     @property
     def possible_steps(self):
         x, y = self.position.x, self.position.y
@@ -66,10 +118,20 @@ class Ball(cocos.sprite.Sprite):
         self.scale = 0.5
         self.putt = putt
 
+        self.clicked = [225, 120, 0]
+
         dx, dy = (self.putt.width - self.width)/2, (self.putt.height - self.height)/2
         self.position = self.putt.position[0] + dx, self.putt.position[1] + dy
 
         self._color = color
+
+    def click(self):
+        if self.color != self.clicked:
+            self.parent.clicked_balls.add(self)
+            self.color = self.clicked
+        else:
+            self.color = [255] * 3
+            self.parent.clicked_balls.remove(self)
 
 
 if __name__ ==  '__main__':
