@@ -4,7 +4,7 @@ HOST = "mail.yandex.ru"
 SUBJECT = "Test email from Python"
 TO = "slavabarsuk@ya.ru"
 FROM = "slavabarsuk@ya.ru"
-text = "Python 3.4 rules them all!"
+text = "Python rules them all!"
   
 BODY = "\r\n".join((
     "From: %s" % FROM,
@@ -16,6 +16,6 @@ BODY = "\r\n".join((
    
     
 server = smtplib.SMTP(HOST)
-server.login('slavabarsuk@ya.ru', 'BarsukMail2019')
+server.login('slavabarsuk@ya.ru', 'PASSWORD')
 server.sendmail(FROM, [TO], BODY)
 server.quit()
