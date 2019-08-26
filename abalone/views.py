@@ -1,11 +1,14 @@
 import cocos
+import views, models
 
 
 class MainScene(cocos.scene.Scene):
     def __init__(self):
         super().__init__()
         self.bg = Backgroung()
+        self.field = models.Field()
         self.add(self.bg)
+        self.add(self.field)
 
 
 class Backgroung(cocos.layer.ColorLayer):
@@ -15,6 +18,6 @@ class Backgroung(cocos.layer.ColorLayer):
 
 def main():
     cocos.director.director.init(width=500, height=500)
-    scene = views.MainScene()
+    scene = MainScene()
     cocos.director.director.run(scene)
 

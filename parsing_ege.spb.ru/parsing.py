@@ -14,7 +14,7 @@ def get_result(html):
 
 
 def parsing(series, number):
-    url = 'https://www.ege.spb.ru/result/index.php?mode=ege2019&wave=0'
+    url = 'https://www.ege.spb.ru/result/index.php?mode=ege2019&wave=2'
     payload = {'Series': series, 'Number': number, 'Login': '%CF%EE%EA%E0%E7%E0%F2%FC+%F0%E5%E7%F3%EB%FC%F2%E0%F2%FB'}
     resp = requests.post(url, payload)
     if resp.status_code == 200:
@@ -38,6 +38,9 @@ def main():
                 student[name] = res[i]
         if student['first_name'] == 'Крамник':
             student['Математика профильная'] = '92'
+            student['Русский язык'] = '87'
+            student['Физика'] = '78'
+            student['Информатика и ИКТ'] = '72'
 
     print('parsing finished')
     print('\n'.join(sorted(list(names_all))))
