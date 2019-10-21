@@ -21,14 +21,19 @@ def o1():
 def o2():
     ls = read_matrix_with_space('base1') # Для суммы
     matrix = models.Matrix(ls, mod=5)
+    b2 = models.Matrix([[x.numerator for x in matrix.columns[4]]], mod=5)
+    b1 = models.Matrix([[x.numerator for x in matrix.columns[3]]], mod=5)
     to_step(matrix)
+
+    print(f'b2={b2}, b1={b1}')
+    print(f'b2 - b1 = {b2-b1}')
 
 def o3():
     M = [models.Matrix(read_matrix_with_space(f'o3_m{i}')) for i in range(1, 5)]
     v = models.Matrix(read_matrix_with_space('o3_v'))
     b2 = models.Matrix(read_matrix_with_space('o3_b2'))
     # A - матрица линейного отображения
-    A = [[0]*4 for _ in range(2)]
+    A = models.Matrix([[0]*4 for _ in range(2)])
     for i, m in enumerate(M):
         p = m*v # умножаем один из базисных векторов M на v
         b = deepcopy(b2)
@@ -39,12 +44,13 @@ def o3():
         x2 = b.rows[1][2]
         x1 = - b.rows[0][1] * x2 + b.rows[0][2]
         # И записываем координаты в матрицу отображения
-        A[0][i] = x1
-        A[1][i] = x2
+        A.rows[0][i] = x1
+        A.rows[1][i] = x2
         print(f'x1={x1}, x2={x2}')
         print('\n')
     # Выводим матрицу отображения
-    pprint([[str(x) for x in a] for a in A])
+    print(A)
+    print(A*models.Matrix([[1], [0], [0], [0]]))
 
 if __name__ == "__main__":
     o3()
