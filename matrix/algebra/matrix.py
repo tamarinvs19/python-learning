@@ -207,10 +207,10 @@ class Matrix:
             ]
 
     def transpose(self):
-        print('--- transponse ---')
+        print('--- transpose ---')
         self.rows = self.columns
         print(self)
-        print(' --- end transponse --- ')
+        print(' --- end transpose --- ')
 
     def sort_by_zero(self, reverse=False, invert=False):
         count_zero = [(count_start_zero(row, invert=invert), row) for row in self.rows]

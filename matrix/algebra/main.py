@@ -19,7 +19,7 @@ def o1():
     to_step(matrix)
 
 def o2():
-    ls = read_matrix_with_space('base1') # Для суммы
+    ls = read_matrix_with_space('o2') # Для суммы
     matrix = models.Matrix(ls, mod=5)
     b2 = models.Matrix([[x.numerator for x in matrix.columns[4]]], mod=5)
     b1 = models.Matrix([[x.numerator for x in matrix.columns[3]]], mod=5)
@@ -27,6 +27,11 @@ def o2():
 
     print(f'b2={b2}, b1={b1}')
     print(f'b2 - b1 = {b2-b1}')
+
+    sup = read_matrix_with_space('o2_sup')
+    matrix_sup = models.Matrix(sup, mod=5)
+    matrix_sup.transpose()
+    matrix_sup.to_step()
 
 def o3():
     M = [models.Matrix(read_matrix_with_space(f'o3_m{i}')) for i in range(1, 5)]
@@ -53,4 +58,4 @@ def o3():
     print(A*models.Matrix([[1], [0], [0], [0]]))
 
 if __name__ == "__main__":
-    o3()
+    o2()
