@@ -22,7 +22,7 @@ def matrix_multiply(A, B):
             for row_a in A]
 
 def fib(n):
-    F = pow([[1, 1], [1, 0]], n, identity_matrix(2), matrix_multiply)
+    F = pow([[1, 1], [1, 0]], n-1, identity_matrix(2), matrix_multiply)
     return F[0][0], F[0][1], F[1][1]
 c, b, a = fib(20182018)
 res = 0
