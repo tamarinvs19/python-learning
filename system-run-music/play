@@ -1,0 +1,12 @@
+#!/usr/bin/python3
+
+import datetime                                                
+from time import sleep
+import os
+time = datetime.time(hour=8, minute=0, second=0, microsecond=0)
+while time > datetime.datetime.today().time():
+    print(time.hour - datetime.datetime.today().time().hour-1, 60 - datetime.datetime.today().time().minute)
+    sleep(600)
+
+    os.popen('audacious 07*')
+

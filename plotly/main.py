@@ -16,4 +16,3 @@ pd.options.display.max_columns = 30
 from IPython.core.interactiveshell import InteractiveShell
 InteractiveShell.ast_node_interactivity = 'all'
 
-
