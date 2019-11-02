@@ -49,6 +49,8 @@ class Number:
 
     def __add__(self, x):
         new_numerator = self.numerator + x.numerator
+        global module
+        module = self.module
         return Number(new_numerator)
 
     def __radd__(self, x):
@@ -184,7 +186,7 @@ class Matrix:
         o, p = b.order
         assert o == n
 
-        matrix = Matrix([[0] * p for _ in range(m)])
+        matrix = Matrix([[0] * p for _ in range(m)], mod=self.module)
         for i in range(m):
             for j in range(p):
                 for k in range(n):
@@ -278,6 +280,9 @@ class Matrix:
                 for i in range(self.num_rows)
             ]
         )
+
+    def __hash__(self):
+        return hash(str(self))
 
     def __sub__(self, other):
         return Matrix(
