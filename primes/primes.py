@@ -18,6 +18,7 @@ def test_is_prime():
     assert is_prime(22) == False
     assert is_prime(1024) == False
     assert is_prime(25) == False
+    assert is_prime(2**32 - 1) == False
 
 def get_primes(limit):
     with open(f'primes_to_{limit}', 'w') as f:
