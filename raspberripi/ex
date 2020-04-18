@@ -1,0 +1,14 @@
+[Alt] + F2${alignr}Run Dialog
+[Alt] + F3${alignr}Alt Menu
+[S] + Space${alignr}Main Menu
+[S] + Tab${alignr}Client Menu
+[S] + t${alignr}Terminal
+[S] + f${alignr}File Manager
+[S] + e${alignr}Editor
+[S] + m${alignr}Media Player
+[S] + w${alignr}Web Browser
+[S] + h${alignr}Task Manager
+[S] + l${alignr}Lock Screen
+[S] + v${alignr}Volume Control
+[S] + x${alignr}Logout
+[PrtSc]${alignr}Screenshot
