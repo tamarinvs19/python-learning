@@ -115,4 +115,8 @@ def o3():
     print(A*models.Matrix([[1], [0], [0], [0]]))
 
 if __name__ == "__main__":
-    o2_sup()
+    # o2_sup()
+    ls = read_matrix_with_space('spkr')
+    matrix = models.Matrix(ls)
+    print(matrix)
+    matrix.to_step(sorting=False)
