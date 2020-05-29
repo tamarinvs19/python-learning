@@ -116,7 +116,6 @@ def o3():
 
 if __name__ == "__main__":
     # o2_sup()
-    ls = read_matrix_with_space('spkr')
+    ls = read_matrix_with_space('task2')
     matrix = models.Matrix(ls)
-    print(matrix)
     matrix.to_step(sorting=False)
