@@ -1,3 +1,4 @@
+from copy import copy
 from heapq import merge
 from collections import Counter
 
@@ -15,18 +16,30 @@ def linear_merge0(list1, list2):
     res += list1[i:] + list2[j:]
     return res
 
+def linear_merge01(list1, list2):
+    result = []
+    while list1 and list2:
+        result.append(list1 if list1[-1] > list2[-1] else list2).pop(-1))
+    return (result + list1[-1::-1] + list2[-1::-1])[-1::-1]
+
 def linear_merge1(list1, list2):
-    result, list1, list2 = [], list1[:], list2[:]
+    result = []
     while list1 and list2:
         result.append((list1 if list1[-1] > list2[-1] else list2).pop(-1))
     return (result + list1[-1::-1] + list2[-1::-1])[-1::-1]
+
+def linear_merge2(list1, list2):
+    result = []
+    while list1 and list2:
+        result.append((list1 if list1[0] < list2[0] else list2).pop(0))
+    return result + list1 + list2
 
 def iter_merge0(list1, list2):
     result, list1, list2 = [], iter(list1), iter(list2)
     x = next(list1, None)
     y = next(list2, None)
     while x is not None and y is not None:
-        if x>y:
+        if x > y:
             result.append(y)
             y = next(list2, None)
         else:
@@ -49,6 +62,18 @@ def iter_merge(ia, ib):
             yield b
             b = next(ib, None)
 
+def iter_merge2(ia, ib):
+    a = next(ia, None)
+    b = next(ib, None)
+    res = []
+    while a is not None or b is not None:
+        if b is None or (a is not None and a < b):
+            yield a
+            a = next(ia, None)
+        else:
+            yield b
+            b = next(ib, None)
+
 def iter_merge1(ia, ib):
     return list(iter_merge(iter(ia), iter(ib)))
 
@@ -60,3 +85,4 @@ def heapq_merge(list1, list2):
 
 def simple_merge(list1, list2):
     return sorted(list1 + list2)
+
