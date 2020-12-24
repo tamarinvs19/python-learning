@@ -1,0 +1,165 @@
+digraph {
+	"Alexander Kulikov" -> "Albert Skalt"
+	"Alexander Kulikov" -> "Vitaly Bragilevsky"
+	"Alexander Kulikov" -> "Maria Filipanova"
+
+	"Maria Filipanova" -> "Saveliy Grigoryev"
+	"Maria Filipanova" -> "Екатерина Фадеева"
+	"Maria Filipanova" -> "Alya Novikova"
+
+	"Saveliy Grigoryev" -> "Fedor Bakharev"
+	"Saveliy Grigoryev" -> "Ainur Ibatov"
+	"Saveliy Grigoryev" -> "Kirill Gavrilov"
+
+	"Екатерина Фадеева" -> "Boris Starkov"
+	"Екатерина Фадеева" -> "Максим Николаев"
+	"Екатерина Фадеева" -> "Danil Sagunov"
+
+	"Ainur Ibatov" -> "Aleksandra Kuzmina"
+	"Ainur Ibatov" -> "Kulikov Daniil"
+	"Ainur Ibatov" -> "Юля Петрова"
+
+	"Юля Петрова" -> "Ivan Oleinik"
+	"Юля Петрова" -> "Shmidt Svetlana"
+	"Юля Петрова" -> "Elena Novozhilova"
+
+	"Fedor Bakharev" -> "Elizaveta Artser"
+	"Fedor Bakharev" -> "Misha Basok"
+	"Fedor Bakharev" -> "Sergey Pospelov"
+
+	"Aleksandra Kuzmina" -> "Константин Чепуркин"
+	"Aleksandra Kuzmina" -> "Andrei Smolensky"
+	"Aleksandra Kuzmina" -> "Denis Moskvin"
+
+	"Kirill Gavrilov" -> "Дмитрий Лапшин"
+	"Kirill Gavrilov" -> "Anastasia Sofronova"
+	"Kirill Gavrilov" -> "Dmitrii Kharlapenko"
+
+	"Misha Basok" -> "Denil Sharipov"
+	"Misha Basok" -> "Anton Tselishchev"
+	"Misha Basok" -> "Arseny Yusufov"
+
+	"Dmitrii Kharlapenko" -> "Nikita Stroganov"
+	"Dmitrii Kharlapenko" -> "Egor Postnikov"
+	"Dmitrii Kharlapenko" -> "Andrei Lavrenov"
+
+	"Andrei Smolensky" -> "Гребенщиков Александр"
+	"Andrei Smolensky" -> "Denis Korotchenko"
+	"Andrei Smolensky" -> "Rustam Sadykov"
+
+	"Albert Skalt" -> "Никита Митцев"
+	"Albert Skalt" -> "Антон Кузнец"
+	"Albert Skalt" -> "Ilya Tyuryaev"
+
+	"Максим Николаев" -> "Egor Gorbachev"
+	"Максим Николаев" -> "Andrew Kislitsyn"
+	"Максим Николаев" -> "Alexander Avdyushenko"
+
+	"Andrew Kislitsyn" -> "Pavlov Ivan"
+	"Andrew Kislitsyn" -> "Gleb Oborin"
+	"Andrew Kislitsyn" -> "Alexander Khrabrov"
+
+	"Elena Novozhilova" -> "Alya Novikova"
+	"Elena Novozhilova" -> "Ivashkov.dmitry"
+	"Elena Novozhilova" -> "Alyona Cherepenova"
+
+	"Shmidt Svetlana" -> "Mikhail Senin"
+	"Shmidt Svetlana" -> "Marina Pereskokova"
+	"Shmidt Svetlana" -> "Evgeny Linsky"
+
+	"Mikhail Senin" -> "Sergey Igushkin"
+	"Mikhail Senin" -> "Игорь Коркин"
+	"Mikhail Senin" -> "Ivan Ogloblin"
+
+	"Rustam Sadykov" -> "Alexey Gordeev"
+	"Rustam Sadykov" -> "Semyon Panenkov"
+	"Rustam Sadykov" -> "Alexander Chvanov"
+
+	"Elizaveta Artser" -> "Isakova Anastasiia"
+	"Elizaveta Artser" -> "Dmitrii Mandelshtam"
+	"Elizaveta Artser" -> "Yana Teplitskaya"
+
+	"Ivan Ogloblin" -> "Agafonov Yurij"
+	"Ivan Ogloblin" -> "Aleksei Lesnik"
+	"Ivan Ogloblin" -> "Valeriy Zainullin"
+
+	"Ilya Tyuryaev" -> "Evgeniy Slobodkin"
+	"Ilya Tyuryaev" -> "Anton Filatov"
+
+	"Никита Митцев" -> "Ivan Klimov"
+	"Никита Митцев" -> "Александр Тульчинский"
+	"Никита Митцев" -> "Tanya Belova"
+
+	"Dmitrii Mandelshtam" -> "Margarita Lashina"
+	"Dmitrii Mandelshtam" -> "Egor Gorbachev"
+	"Dmitrii Mandelshtam" -> "Vitaly Bragilevsky"
+
+	"Ivashkov.dmitry" -> "Denis Moskvin"
+	"Ivashkov.dmitry" -> "Aleksandrina Streltsova"
+	"Ivashkov.dmitry" -> "Alexey Gordeev"
+
+	"Valeriy Zainullin" -> "Тимофей Титов"
+	"Valeriy Zainullin" -> "Pogrebnoj Andrej"
+	"Valeriy Zainullin" -> "Vadim Salavatov"
+
+	"Egor Gorbachev" -> "Mikhail Ivanov"
+	"Egor Gorbachev" -> "Alya Novikova"
+	"Egor Gorbachev" -> "Vasily Lupuleac"
+
+	"Vadim Salavatov" -> "Nikita Tsarev"
+	"Vadim Salavatov" -> "Anton Shangareev"
+	"Vadim Salavatov" -> "Olga Shimanskaia"
+
+	"Anastasia Sofronova" -> "Sergey Khargelia"
+	"Anastasia Sofronova" -> "Timur Garaev"
+	"Anastasia Sofronova" -> "Gleb Oborin"
+
+	"Vasily Lupuleac" -> "Андрей Можаев"
+	"Vasily Lupuleac" -> "Андрей Можаев"
+	"Vasily Lupuleac" -> "Андрей Можаев"
+
+	"Nikita Tsarev" -> "Эдгар Жаворонков"
+	"Nikita Tsarev" -> "Nikita Bosov"
+	"Nikita Tsarev" -> "Nikita Bykov"
+
+	"Дмитрий Лапшин" -> "Evgeny Linsky"
+	"Дмитрий Лапшин" -> "Anton Filatov"
+	"Дмитрий Лапшин" -> "Пётр Смирнов"
+
+	"Nikita Bosov" -> "Ilya Voronin"
+	"Nikita Bosov" -> "Danil Argunov"
+	"Nikita Bosov" -> "sobolevn"
+
+	"Тимофей Титов" -> "Nikita Stroganov"
+	"Тимофей Титов" -> "Kulikov Daniil"
+	"Тимофей Титов" -> "Danil Sagunov"
+
+	"Denis Korotchenko" -> "Vyacheslav Tamarin"
+	"Denis Korotchenko" -> "Denil Sharipov"
+	"Denis Korotchenko" -> "Aleksandrina Streltsova"
+
+	"Alexey Gordeev" -> "Artur Ryazanov"
+	"Alexey Gordeev" -> "Marina Pereskokova"
+	"Alexey Gordeev" -> "Stephen Ostapenko"
+
+	"Olga Shimanskaia" -> "Fedor Chernogorsky"
+	"Olga Shimanskaia" -> "Bogdan Bugaev"
+	"Olga Shimanskaia" -> "Maria Malysheva"
+
+	"Denil Sharipov" -> "Nikita Stroganov"
+	"Denil Sharipov" -> "Nikita Stroganov"
+	"Denil Sharipov" -> "Nikita Stroganov"
+
+	"Alya Novikova" -> "Bogdan Bugaev"
+	"Alya Novikova" -> "Sergey Krivohatskiy"
+	"Alya Novikova" -> "Anton Kryshchenko"
+
+	"Aleksandrina Streltsova" -> "Dmitry Shalymov"
+	"Aleksandrina Streltsova" -> "Evgeny Im"
+	"Aleksandrina Streltsova" -> "Emdin Grigory"
+
+	"Ivan Oleinik" -> "Anton Paramonov"
+	"Ivan Oleinik" -> "Vyacheslav Tamarin"
+	"Ivan Oleinik" -> "Anton Shangareev"
+
+}
