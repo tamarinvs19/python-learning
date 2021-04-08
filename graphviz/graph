@@ -162,4 +162,93 @@ digraph {
 	"Ivan Oleinik" -> "Vyacheslav Tamarin"
 	"Ivan Oleinik" -> "Anton Shangareev"
 
+	"Egor Postnikov" -> "Kulikov Daniil"
+	"Egor Postnikov" -> "Kulikov Daniil"
+	"Egor Postnikov" -> "Kulikov Daniil"
+
+	"Kulikov Daniil" -> "Vitaly Bragilevsky"
+	"Kulikov Daniil" -> "Vitaly Bragilevsky"
+	"Kulikov Daniil" -> "Vitaly Bragilevsky"
+
+	"Vyacheslav Tamarin" -> "Danya Berezun"
+	"Vyacheslav Tamarin" -> "Makar S"
+	"Vyacheslav Tamarin" -> "Андрей Можаев"
+
+	"Maria Malysheva" -> "Vladimir Gladstein"
+	"Maria Malysheva" -> "Соня Афанасьева"
+	"Maria Malysheva" -> "Elena Ikonnikova"
+
+	"Эдгар Жаворонков" -> "Fedor Chernogorsky"
+	"Эдгар Жаворонков" -> "Aleksei Lesnik"
+	"Эдгар Жаворонков" -> "Alya Novikova"
+
+	"Semyon Panenkov" -> "Андрей Козырев"
+	"Semyon Panenkov" -> "Maksim Martynov"
+	"Semyon Panenkov" -> "Mark Prudnikov"
+
+	"Vladimir Gladstein" -> "Dmitrii Mikhailovskii"
+	"Vladimir Gladstein" -> "Ryadovkin Kirill"
+	"Vladimir Gladstein" -> "Polina Klimenko"
+
+	"Bogdan Bugaev" -> "Anton Kryshchenko"
+	"Bogdan Bugaev" -> "Danil Sagunov"
+	"Bogdan Bugaev" -> "Антон Кузнец"
+
+	"Isakova Anastasiia" -> "Alexander Khrabrov"
+	"Isakova Anastasiia" -> "Marina Pereskokova"
+	"Isakova Anastasiia" -> "Sasha Novikova"
+
+	"Arseny Yusufov" -> "Дмитрий Лапшин"
+
+	"Sasha Novikova" -> "Igor"
+	"Sasha Novikova" -> "Volodya Rachkin"
+	"Sasha Novikova" -> "Maria"
+
+	"Mikhail Ivanov" -> "Vsevolod Evtushevsky"
+	"Mikhail Ivanov" -> "Nikita Karagodin"
+	"Mikhail Ivanov" -> "Kirill Tyshchuk"
+
+	"Fedor Chernogorsky" -> "Evgeny Im"
+	"Fedor Chernogorsky" -> "Emdin Grigory"
+	"Fedor Chernogorsky" -> "Anton Paramonov"
+
+	"Maksim Martynov" -> "Ilya Muradyan"
+	"Maksim Martynov" -> "Anton Tselishchev"
+	"Maksim Martynov" -> "Anton Filatov"
+
+	"Андрей Козырев" -> "Evgeniy Slobodkin"
+	"Андрей Козырев" -> "Alexander Khrabrov"
+	"Андрей Козырев" -> "Alejsandr Novozhilov"
+
+	"Alejsandr Novozhilov" -> "Evgeniy Slobodkin"
+	"Alejsandr Novozhilov" -> "Anton Tselishchev"
+
+	"Anton Kryshchenko" -> "Danya Berezun"
+	"Anton Kryshchenko" -> "Tanya Belova"
+	"Anton Kryshchenko" -> "Vitaly Bragilevsky"
+
+	"Mark Prudnikov" -> "Elena Ikonnikova"
+	"Mark Prudnikov" -> "Соня Афанасьева"
+	"Mark Prudnikov" -> "Maria"
+
+
+	"Ilya Muradyan" -> "Alexander Golovastenko"
+	"Ilya Muradyan" -> "Alyona Cherepenova"
+	"Ilya Muradyan" -> "Vitaly Bragilevsky"
+
+	"Gleb Oborin" -> "Danil Argunov"
+	"Gleb Oborin" -> "Evgeny Im"
+	"Gleb Oborin" -> "Vitaly Bragilevsky"
+
+	"Timur Garaev" -> "Vitaly Bragilevsky"
+
+	"Kirill Tyshchuk" -> "Arina Ulanova"
+	"Kirill Tyshchuk" -> "Alexey Davydov"
+	"Kirill Tyshchuk" -> "Alexander Sukhochev"
+
+
+	"Elena Ikonnikova" -> "Pavlov Ivan"
+	"Elena Ikonnikova" -> "Иван Волков"
+	"Elena Ikonnikova" -> "Ivan Bliznets"
+
 }
