@@ -11,7 +11,7 @@ size, higth_b = (1300, 800), 1000
 class Barrier(Sprite):
     def __init__(self, x, h):
         super().__init__('barrier.png')
-        self.position = x, h-higth_b//2
+        self.position = x, h-higth_b // 2
         self.h, self.v, self.r = h, 4, 40
         self.schedule(self.phyzic)
 
@@ -26,7 +26,7 @@ class Badger(Sprite):
     def __init__(self, x, y):
         super().__init__('badger.png')
         self.position, self.r = (x, y), 32
-        self.control_up, self.v_up, self.v_down = key.SPACE, 10, 2
+        self.control_up, self.v_up, self.v_down = key.SPACE, 6, 2
         self.schedule(self.phyzic)
 
     def move(self, direction):
