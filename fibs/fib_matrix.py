@@ -24,11 +24,12 @@ def matrix_multiply(A, B):
 def fib(n):
     F = pow([[1, 1], [1, 0]], n-1, identity_matrix(2), matrix_multiply)
     return F[0][0], F[0][1], F[1][1]
-c, b, a = fib(20182018)
-res = 0
-phi = (1+5**0.5)/2
-for n in range(20182019, 20192019):
-    a, b, c = b, a+b, b+b+a
-    if (c%2 + a%2)%2 == 0:
-        res += 1
-print(res)
+# c, b, a = fib(20182018)
+# res = 0
+# phi = (1+5**0.5)/2
+# for n in range(20182019, 20192019):
+#     a, b, c = b, a+b, b+b+a
+#     if (c%2 + a%2)%2 == 0:
+#         res += 1
+# print(res)
+print(fib(100) % 10)

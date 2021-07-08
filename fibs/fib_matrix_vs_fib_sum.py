@@ -32,6 +32,8 @@ def fib_sum(n):
         a, b = b, a+b
     return b
 
-import timeit
-print(timeit.timeit('fib_sum(10**8)', number=1, globals={'fib_sum':fib_sum}))
-print(timeit.timeit('fib_matrix(10**8)', number=1, globals={'fib_matrix':fib_matrix}))
+print(fib_sum(100) % 10)
+
+# import timeit
+# print(timeit.timeit('fib_sum(10**8)', number=1, globals={'fib_sum':fib_sum}))
+# print(timeit.timeit('fib_matrix(10**8)', number=1, globals={'fib_matrix':fib_matrix}))
